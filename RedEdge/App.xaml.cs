@@ -1,7 +1,4 @@
-﻿using Autofac;
-using RedEdge.DataService;
-using RedEdge.Interfaces;
-using System;
+﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
@@ -24,8 +21,6 @@ namespace RedEdge
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            var builder = new ContainerBuilder();
-            builder.RegisterType<ClientService>().As<IClientDataService>();
         }
 
         /// <summary>

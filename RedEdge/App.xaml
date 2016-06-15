@@ -5,4 +5,8 @@
     xmlns:local="using:RedEdge"
     RequestedTheme="Light">
 
+    <Application.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:RedEdge.Services" x:Key="Locator" />
+    </Application.Resources>
+    
 </Application>
