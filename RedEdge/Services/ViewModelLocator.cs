@@ -1,7 +1,10 @@
 ﻿using Autofac;
 using Autofac.Extras.CommonServiceLocator;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
+using RedEdge.ClientDetails;
+using RedEdge.ClientList;
 using RedEdge.Interfaces;
 using RedEdge.Main;
 
@@ -26,6 +29,14 @@ namespace RedEdge.Services
             }
             container.RegisterType<ClientDataService>().As<IClientDataService>();
             container.RegisterType<MainViewModel>();
+            container.Register(c => CreateNavigationService()).As<INavigationService>();
+        }
+
+        private INavigationService CreateNavigationService() {
+            var navigationService = new NavigationService();
+            navigationService.Configure("ClientDetailsView", typeof(ClientDetailsView));
+            navigationService.Configure("ClientListView", typeof(ClientListView));
+            return navigationService;
         }
     }
 }

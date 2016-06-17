@@ -98,6 +98,9 @@
     <Compile Include="ClientDetails\ClientDetailsView.xaml.cs">
       <DependentUpon>ClientDetailsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ClientList\ClientListView.xaml.cs">
+      <DependentUpon>ClientListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IClientDataService.cs" />
     <Compile Include="Interfaces\INotificationService.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -134,6 +137,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="ClientDetails\ClientDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientList\ClientListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

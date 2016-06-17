@@ -6,7 +6,7 @@
     RequestedTheme="Light">
 
     <Application.Resources>
-        <vm:ViewModelLocator xmlns:vm="using:RedEdge.Services" x:Key="Locator" />
+        <vm:ViewModelLocator xmlns:vm="using:RedEdge.Services" x:Key="ViewModelLocator" />
     </Application.Resources>
     
 </Application>
