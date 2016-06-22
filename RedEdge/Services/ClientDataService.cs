@@ -1,7 +1,7 @@
-﻿using RedEdge.Interfaces;
+﻿using RedEdge.Common.Models;
+using RedEdge.Interfaces;
 using System;
 using System.Collections.Generic;
-using RedEdge.Models;
 
 namespace RedEdge.Services
 {

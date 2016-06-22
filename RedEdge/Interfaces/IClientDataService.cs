@@ -1,4 +1,4 @@
-﻿using RedEdge.Models;
+﻿using RedEdge.Common.Models;
 using System.Collections.Generic;
 
 namespace RedEdge.Interfaces

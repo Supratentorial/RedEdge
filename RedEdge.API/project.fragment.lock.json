@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "exports": {
+    "RedEdge.Common/1.0.0": {
+      "type": "project",
+      "framework": ".NETPlatform,Version=v5.0",
+      "compile": {
+        "bin/Debug/RedEdge.Common.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/RedEdge.Common.dll": {}
+      }
+    }
+  }
+}

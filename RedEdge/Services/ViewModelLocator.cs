@@ -7,6 +7,7 @@ using RedEdge.ClientDetails;
 using RedEdge.ClientList;
 using RedEdge.Interfaces;
 using RedEdge.Main;
+using RedEdge.MatterList;
 
 namespace RedEdge.Services
 {
@@ -15,28 +16,53 @@ namespace RedEdge.Services
     {/// <summary>
      /// Initializes a new instance of the ViewModelLocator class.
      /// </summary>
+     /// 
+        public MainViewModel MainViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MainViewModel>();
+            }
+        }
+
+        public ClientListViewModel ClientListViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ClientListViewModel>();
+            }
+        }
+
+        public MatterListViewModel MatterListViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<MatterListViewModel>();
+            }
+        }
+
         public ViewModelLocator()
         {
-            var container = new ContainerBuilder();
-            ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container.Build()));
+            var builder = new ContainerBuilder();
+
 
             if (ViewModelBase.IsInDesignModeStatic)
             {
                 //Register design time services
             }
-            else {
+            else
+            {
 
             }
-            container.RegisterType<ClientDataService>().As<IClientDataService>();
-            container.RegisterType<MainViewModel>();
-            container.Register(c => CreateNavigationService()).As<INavigationService>();
+            builder.RegisterType<ClientDataService>().As<IClientDataService>();
+            builder.RegisterType<MainViewModel>();
+            builder.RegisterType<ClientListViewModel>();
+            builder.RegisterType<MatterListViewModel>();
+           
+            var container = builder.Build();
+            ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container));
         }
 
-        private INavigationService CreateNavigationService() {
-            var navigationService = new NavigationService();
-            navigationService.Configure("ClientDetailsView", typeof(ClientDetailsView));
-            navigationService.Configure("ClientListView", typeof(ClientListView));
-            return navigationService;
-        }
+       
     }
 }
