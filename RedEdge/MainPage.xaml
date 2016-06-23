@@ -9,21 +9,20 @@
     Padding="8"
     DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=MainViewModel}">
     <Page.Resources>
-        <DataTemplate x:Key="NavMenuItemTemplate" x:DataType="main:NavMenuItem">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="48" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-                <FontIcon x:Name="Glyph" FontSize="16" Glyph="{x:Bind SymbolAsChar}" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTipService.ToolTip="{x:Bind Label}"/>
-                <TextBlock x:Name="Text" Grid.Column="1" Text="{x:Bind Label}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="NoWrap"/>
-            </Grid>
-        </DataTemplate>
+      
     </Page.Resources>
-    <Grid>
-        <SplitView>
-            
-            
-        </SplitView>
-    </Grid>
+    <SplitView DisplayMode="Inline" OpenPaneLength="320" IsTabStop="False">
+        <SplitView.Pane>
+            <ItemsControl ItemsSource="{Binding Path=NavMenuItems}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>Penis</TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <TextBlock Text="{Binding Path=PageTitle}"/>
+        </SplitView.Content>
+    </SplitView>
 </Page>

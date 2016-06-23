@@ -54,11 +54,13 @@ namespace RedEdge.Services
             {
 
             }
+            var navigationService = new NavigationService();
+
             builder.RegisterType<ClientDataService>().As<IClientDataService>();
             builder.RegisterType<MainViewModel>();
             builder.RegisterType<ClientListViewModel>();
             builder.RegisterType<MatterListViewModel>();
-           
+            builder.RegisterInstance(navigationService).AsImplementedInterfaces();
             var container = builder.Build();
             ServiceLocator.SetLocatorProvider(() => new AutofacServiceLocator(container));
         }

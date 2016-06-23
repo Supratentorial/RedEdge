@@ -10,7 +10,7 @@ namespace RedEdge.Main
 {
     public class MainViewModel : ViewModelBase
     {
-        private List<NavMenuItem> _navList;
+        public IList<NavMenuItem> NavMenuItems { get; }
         private INavigationService _navigationService;
 
         public RelayCommand ClientListCommand { get; set; }
@@ -20,7 +20,7 @@ namespace RedEdge.Main
         public MainViewModel(INavigationService navigationService)
         {
 
-            _navList = new List<NavMenuItem>() {
+            NavMenuItems = new List<NavMenuItem>() {
                 new NavMenuItem() {
                     Label = "Matters",
                     DestPage = typeof(MattersListView),
