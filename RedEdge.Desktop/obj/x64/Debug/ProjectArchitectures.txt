@@ -1,0 +1,2 @@
+C:\Users\Blake\Github\RedEdge\RedEdge.Common\RedEdge.Common.csproj;neutral
+C:\Users\Blake\Github\RedEdge\RedEdge.Desktop\RedEdge.Desktop.csproj;x64
