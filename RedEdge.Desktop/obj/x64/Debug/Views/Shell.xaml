@@ -1,4 +1,4 @@
-<Page x:Class="RedEdge.Desktop.Views.Shell"
+﻿<Page x:Class="RedEdge.Desktop.Views.Shell"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:Controls="using:Template10.Controls"
@@ -11,7 +11,7 @@
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
       mc:Ignorable="d">
 
-    <Controls:HamburgerMenu x:Name="MyHamburgerMenu">
+    <Controls:HamburgerMenu x:ConnectionId='1' x:Name="MyHamburgerMenu">
 
         <Controls:HamburgerMenu.PrimaryButtons>
             <!--  mainpage button  -->
@@ -37,7 +37,7 @@
 
         <Controls:HamburgerMenu.SecondaryButtons>
             <!--  settingspage button  -->
-            <Controls:HamburgerButtonInfo x:Name="SettingsButton" PageParameter="0"
+            <Controls:HamburgerButtonInfo x:ConnectionId='2' x:Name="SettingsButton" PageParameter="0"
                                           PageType="views:SettingsPage">
                 <Controls:HamburgerButtonInfo.NavigationTransitionInfo>
                     <SuppressNavigationTransitionInfo />
@@ -54,4 +54,5 @@
     </Controls:HamburgerMenu>
 
 </Page>
+
 

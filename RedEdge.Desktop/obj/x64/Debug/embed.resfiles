@@ -2,10 +2,10 @@ App.xbf
 Styles\BrushResources.xbf
 Styles\Custom.xbf
 Views\Busy.xbf
-Views\ClientListView.xbf
+Views\ContactListView.xbf
 Views\DetailPage.xbf
 Views\MainPage.xbf
-Views\MattersListView.xbf
+Views\MatterListView.xbf
 Views\SettingsPage.xbf
 Views\Shell.xbf
 Views\Splash.xbf

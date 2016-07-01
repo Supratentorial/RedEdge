@@ -46,10 +46,11 @@
     <RootType FullName="Template10.Controls.PageHeader">
       <RootProperty Name="VisualStateNarrowMinWidth" />
       <RootProperty Name="VisualStateNormalMinWidth" />
+      <RootProperty Name="Content" />
       <RootProperty Name="Frame" />
       <RootProperty Name="Text" />
       <RootProperty Name="SecondaryCommands" />
-      <RootProperty Name="Content" />
+      <RootProperty Name="PrimaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Background" />
@@ -106,9 +107,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Text" />
-      <RootProperty Name="Inlines" />
       <RootProperty Name="Style" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Inlines" />
       <RootProperty Name="LineHeight" />
       <RootProperty Name="TextWrapping" />
     </RootType>
@@ -122,8 +123,19 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Background" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition" />
-    <RootType FullName="RedEdge.ClientList.ClientListView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+      <RootProperty Name="Header" />
+      <RootProperty Name="DataContext" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="RedEdge.Desktop.Views.ContactListView" />
     <RootType FullName="RedEdge.Desktop.ViewModels.DetailPageViewModel" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Background" />
@@ -214,20 +226,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Label" />
+      <RootProperty Name="Icon" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="RedEdge.Desktop.Views.MainPage" />
-    <RootType FullName="RedEdge.MatterList.MattersListView" />
+    <RootType FullName="RedEdge.Desktop.Views.MatterListView" />
     <RootType FullName="RedEdge.Desktop.ViewModels.SettingsPageViewModel" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="Padding" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />

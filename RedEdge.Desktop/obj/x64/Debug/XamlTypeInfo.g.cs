@@ -207,7 +207,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
             _typeNameTable[47] = "Windows.UI.Xaml.Controls.Control";
             _typeNameTable[48] = "Windows.Foundation.Size";
             _typeNameTable[49] = "RedEdge.Desktop.Views.Busy";
-            _typeNameTable[50] = "RedEdge.ClientList.ClientListView";
+            _typeNameTable[50] = "RedEdge.Desktop.Views.ContactListView";
             _typeNameTable[51] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[52] = "RedEdge.Desktop.ViewModels.DetailPageViewModel";
             _typeNameTable[53] = "Template10.Mvvm.ViewModelBase";
@@ -228,7 +228,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
             _typeNameTable[68] = "Template10.Behaviors.FocusAction";
             _typeNameTable[69] = "Microsoft.Xaml.Interactions.Core.CallMethodAction";
             _typeNameTable[70] = "RedEdge.Desktop.Views.MainPage";
-            _typeNameTable[71] = "RedEdge.MatterList.MattersListView";
+            _typeNameTable[71] = "RedEdge.Desktop.Views.MatterListView";
             _typeNameTable[72] = "RedEdge.Desktop.ViewModels.SettingsPageViewModel";
             _typeNameTable[73] = "RedEdge.Desktop.ViewModels.SettingsPartViewModel";
             _typeNameTable[74] = "RedEdge.Desktop.ViewModels.AboutPartViewModel";
@@ -287,7 +287,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
             _typeTable[47] = typeof(global::Windows.UI.Xaml.Controls.Control);
             _typeTable[48] = typeof(global::Windows.Foundation.Size);
             _typeTable[49] = typeof(global::RedEdge.Desktop.Views.Busy);
-            _typeTable[50] = typeof(global::RedEdge.ClientList.ClientListView);
+            _typeTable[50] = typeof(global::RedEdge.Desktop.Views.ContactListView);
             _typeTable[51] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[52] = typeof(global::RedEdge.Desktop.ViewModels.DetailPageViewModel);
             _typeTable[53] = typeof(global::Template10.Mvvm.ViewModelBase);
@@ -308,7 +308,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
             _typeTable[68] = typeof(global::Template10.Behaviors.FocusAction);
             _typeTable[69] = typeof(global::Microsoft.Xaml.Interactions.Core.CallMethodAction);
             _typeTable[70] = typeof(global::RedEdge.Desktop.Views.MainPage);
-            _typeTable[71] = typeof(global::RedEdge.MatterList.MattersListView);
+            _typeTable[71] = typeof(global::RedEdge.Desktop.Views.MatterListView);
             _typeTable[72] = typeof(global::RedEdge.Desktop.ViewModels.SettingsPageViewModel);
             _typeTable[73] = typeof(global::RedEdge.Desktop.ViewModels.SettingsPartViewModel);
             _typeTable[74] = typeof(global::RedEdge.Desktop.ViewModels.AboutPartViewModel);
@@ -359,7 +359,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
         private object Activate_41_PageHeader() { return new global::Template10.Controls.PageHeader(); }
         private object Activate_46_Resizer() { return new global::Template10.Controls.Resizer(); }
         private object Activate_49_Busy() { return new global::RedEdge.Desktop.Views.Busy(); }
-        private object Activate_50_ClientListView() { return new global::RedEdge.ClientList.ClientListView(); }
+        private object Activate_50_ContactListView() { return new global::RedEdge.Desktop.Views.ContactListView(); }
         private object Activate_52_DetailPageViewModel() { return new global::RedEdge.Desktop.ViewModels.DetailPageViewModel(); }
         private object Activate_57_DetailPage() { return new global::RedEdge.Desktop.Views.DetailPage(); }
         private object Activate_58_MainPageViewModel() { return new global::RedEdge.Desktop.ViewModels.MainPageViewModel(); }
@@ -370,7 +370,7 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
         private object Activate_68_FocusAction() { return new global::Template10.Behaviors.FocusAction(); }
         private object Activate_69_CallMethodAction() { return new global::Microsoft.Xaml.Interactions.Core.CallMethodAction(); }
         private object Activate_70_MainPage() { return new global::RedEdge.Desktop.Views.MainPage(); }
-        private object Activate_71_MattersListView() { return new global::RedEdge.MatterList.MattersListView(); }
+        private object Activate_71_MatterListView() { return new global::RedEdge.Desktop.Views.MatterListView(); }
         private object Activate_72_SettingsPageViewModel() { return new global::RedEdge.Desktop.ViewModels.SettingsPageViewModel(); }
         private object Activate_73_SettingsPartViewModel() { return new global::RedEdge.Desktop.ViewModels.SettingsPartViewModel(); }
         private object Activate_74_AboutPartViewModel() { return new global::RedEdge.Desktop.ViewModels.AboutPartViewModel(); }
@@ -776,9 +776,9 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 50:   //  RedEdge.ClientList.ClientListView
+            case 50:   //  RedEdge.Desktop.Views.ContactListView
                 userType = new global::RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_50_ClientListView;
+                userType.Activator = Activate_50_ContactListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -1093,9 +1093,9 @@ namespace RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 71:   //  RedEdge.MatterList.MattersListView
+            case 71:   //  RedEdge.Desktop.Views.MatterListView
                 userType = new global::RedEdge.Desktop.RedEdge_Desktop_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_71_MattersListView;
+                userType.Activator = Activate_71_MatterListView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

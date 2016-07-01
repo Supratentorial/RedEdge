@@ -120,8 +120,8 @@
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\MattersListView.xaml.cs">
-      <DependentUpon>MattersListView.xaml</DependentUpon>
+    <Compile Include="Views\MatterListView.xaml.cs">
+      <DependentUpon>MatterListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -182,7 +182,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\MattersListView.xaml">
+    <Page Include="Views\MatterListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
