@@ -100,14 +100,18 @@
     <Compile Include="Interfaces\IClientDataService.cs" />
     <Compile Include="Interfaces\IMatterDataService.cs" />
     <Compile Include="Interfaces\INotificationService.cs" />
-    <Compile Include="ViewModels\ClientDetailsViewModel.cs" />
+    <Compile Include="ViewModels\AddContactViewModel.cs" />
+    <Compile Include="ViewModels\ContactDetailsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SettingsServices\SettingsService.cs" />
-    <Compile Include="ViewModels\ClientListViewModel.cs" />
+    <Compile Include="ViewModels\ContactListViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\DetailPageViewModel.cs" />
     <Compile Include="ViewModels\MatterListViewModel.cs" />
     <Compile Include="ViewModels\SettingsPageViewModel.cs" />
+    <Compile Include="Views\AddContactView.xaml.cs">
+      <DependentUpon>AddContactView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Busy.xaml.cs">
       <DependentUpon>Busy.xaml</DependentUpon>
     </Compile>
@@ -165,6 +169,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Views\AddContactView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Busy.xaml">
       <Generator>MSBuild:Compile</Generator>

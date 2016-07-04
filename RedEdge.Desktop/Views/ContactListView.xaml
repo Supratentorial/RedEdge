@@ -5,8 +5,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:controls="using:Template10.Controls">
-    
+    xmlns:controls="using:Template10.Controls"
+    xmlns:vm="using:RedEdge.Desktop.ViewModels">
+
+    <Page.DataContext>
+        <vm:ContactListViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         
         <Grid.ColumnDefinitions>
@@ -16,7 +20,11 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <controls:PageHeader Content="Contacts" Grid.Row="0"/>
+        <controls:PageHeader Content="Contacts" Grid.Row="0">
+            <controls:PageHeader.PrimaryCommands>
+                <AppBarButton Label="New Contact" Icon="Add" Click="{x:Bind ViewModel.GoToAddContact}"/>
+            </controls:PageHeader.PrimaryCommands>
+        </controls:PageHeader>
         <Pivot Grid.Row="1">
             <PivotItem Header="All">
                 

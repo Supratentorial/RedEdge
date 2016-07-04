@@ -2,8 +2,8 @@
 
 namespace RedEdge.Desktop.ViewModels
 {
-    public class MatterListViewModel : ViewModelBase
+    public class ContactDetailsViewModel : ViewModelBase
     {
-
+        
     }
 }
