@@ -29,8 +29,7 @@
         </controls:PageHeader>
         <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource BorderBackground}" Margin="16" Padding="16" CornerRadius="4" BorderBrush="{StaticResource BorderColor}" BorderThickness="1">
             <RelativePanel>
-
-                    <ComboBox x:Name="TitleOptions" ItemsSource="{x:Bind ViewModel.TitleOptions}" Header="Title"/>
+                    <ComboBox x:Name="TitleOptions" ItemsSource="{x:Bind ViewModel.TitleOptions}" Header="Title" RelativePanel.Above=""/>
                     <TextBox x:Name="GivenName" Header="Given Name"/>
                     <TextBox x:Name="MiddleNames" Header="Middle Names"/>
                     <TextBox x:Name="FamilyName" Header="Family Name"/>
