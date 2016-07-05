@@ -6,28 +6,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Template10.Controls"
+    xmlns:vm="using:RedEdge.Desktop.ViewModels"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+    <Page.DataContext>
+        <vm:AddContactViewModel x:Name="ViewModel"/>
+    </Page.DataContext>
+
+    <Grid Background="{StaticResource AppBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <controls:PageHeader Content="New Contact"/>
-        <Border Grid.Row="1">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Header="Title" Grid.Column="0"/>
-                <TextBox Header="Given Name" Grid.Column="1"/>
-                <TextBox Header="Family Name" Grid.Column="2"/>
-            </Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <controls:PageHeader Content="New Contact" Grid.ColumnSpan="2" Grid.Row="0">
+            <controls:PageHeader.PrimaryCommands>
+                <AppBarButton Label="Save Contact" Icon="Save"/>
+            </controls:PageHeader.PrimaryCommands>
+        </controls:PageHeader>
+        <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource BorderBackground}" Margin="16" Padding="16" CornerRadius="4" BorderBrush="{StaticResource BorderColor}" BorderThickness="1">
+            <RelativePanel>
+
+                    <ComboBox x:Name="TitleOptions" ItemsSource="{x:Bind ViewModel.TitleOptions}" Header="Title"/>
+                    <TextBox x:Name="GivenName" Header="Given Name"/>
+                    <TextBox x:Name="MiddleNames" Header="Middle Names"/>
+                    <TextBox x:Name="FamilyName" Header="Family Name"/>
+            </RelativePanel>
         </Border>
     </Grid>
 </Page>

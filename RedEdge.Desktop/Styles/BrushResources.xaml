@@ -2,6 +2,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <SolidColorBrush x:Key="BorderColor"/>
+    <SolidColorBrush x:Key="BorderBackground" Color="White"/>
+    <SolidColorBrush x:Key="AppBackground" Color="#ECEFF1"/>
+    <SolidColorBrush x:Key="FontPrimary" Color="#263238"/>
+    <SolidColorBrush x:Key="BorderColor" Color="#CFD8DC"/>
 
 </ResourceDictionary>
