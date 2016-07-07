@@ -1,4 +1,0 @@
-C:\Users\Blake\Github\RedEdge\RedEdge.Common\bin\Debug\RedEdge.Common.dll
-C:\Users\Blake\Github\RedEdge\RedEdge.Common\bin\Debug\RedEdge.Common.pdb
-C:\Users\Blake\Github\RedEdge\RedEdge.Common\obj\Debug\RedEdge.Common.dll
-C:\Users\Blake\Github\RedEdge\RedEdge.Common\obj\Debug\RedEdge.Common.pdb
