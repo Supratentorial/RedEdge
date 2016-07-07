@@ -13,27 +13,24 @@
         <vm:AddContactViewModel x:Name="ViewModel"/>
     </Page.DataContext>
 
-    <Grid Background="{StaticResource AppBackground}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <controls:PageHeader Content="New Contact" Grid.ColumnSpan="2" Grid.Row="0">
+    <RelativePanel Background="{StaticResource AppBackground}">
+        <controls:PageHeader x:Name="PageHeader" Content="New Contact" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True">
             <controls:PageHeader.PrimaryCommands>
                 <AppBarButton Label="Save Contact" Icon="Save"/>
             </controls:PageHeader.PrimaryCommands>
         </controls:PageHeader>
-        <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource BorderBackground}" Margin="16" Padding="16" CornerRadius="4" BorderBrush="{StaticResource BorderColor}" BorderThickness="1">
-            <RelativePanel>
-                    <ComboBox x:Name="TitleOptions" ItemsSource="{x:Bind ViewModel.TitleOptions}" Header="Title"/>
-                    <TextBox x:Name="GivenName" Header="Given Name" RelativePanel.AlignLeftWith="TitleOptions"/>
-                    <TextBox x:Name="MiddleNames" Header="Middle Names" RelativePanel.Below="TitleOptions"/>
-                    <TextBox x:Name="FamilyName" Header="Family Name"/>
-            </RelativePanel>
+        <Border x:Name="BasicBorder" RelativePanel.Below="PageHeader" Style="{StaticResource FormBorder}">
+            <StackPanel Orientation="Vertical">
+                <ComboBox x:Name="TitleOptions" ItemsSource="{x:Bind ViewModel.TitleOptions}" Header="Title" Width="150" Margin="0,0,0,10"/>
+                <TextBox x:Name="GivenName" Header="Given Name" Width="300" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                <TextBox x:Name="MiddleNames" Header="Middle Name(s)" Width="300" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+                <TextBox x:Name="FamilyName" Header="Family Name" Width="300" HorizontalAlignment="Left" Margin="0,0,0,10"/>
+            </StackPanel>
         </Border>
-    </Grid>
+        <Border x:Name="ContactBorder" RelativePanel.RightOf="BasicBorder" RelativePanel.Below="PageHeader" Style="{StaticResource FormBorder}">
+            <StackPanel Orientation="Vertical">
+
+            </StackPanel>
+        </Border>
+    </RelativePanel>
 </Page>
