@@ -9,6 +9,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles\Custom.xaml" />
                 <ResourceDictionary Source="Styles\BrushResources.xaml"/>
+                <ResourceDictionary Source="Styles\Dimensions.xaml"/>
+                <ResourceDictionary Source="Styles\FormBorder.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

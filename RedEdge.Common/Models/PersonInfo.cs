@@ -8,5 +8,11 @@ namespace RedEdge.Common.Models
 {
     public class PersonInfo
     {
+        public int PersonInfoId { get; set; }
+        public string Title { get; set; }
+        public string GivenName { get; set; }
+        public string FamilyName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+
     }
 }
