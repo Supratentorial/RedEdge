@@ -11,7 +11,6 @@ namespace RedEdge.API.Controllers
     [Route("api/[controller]")]
     public class ContactsController : Controller
     {
-        // GET: api/values
         [HttpGet]
         public IEnumerable<string> Get ()
         {

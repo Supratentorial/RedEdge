@@ -97,9 +97,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\IClientDataService.cs" />
+    <Compile Include="Interfaces\IContactsService.cs" />
     <Compile Include="Interfaces\IMatterDataService.cs" />
     <Compile Include="Interfaces\INotificationService.cs" />
+    <Compile Include="Services\ContactsService.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="ViewModels\AddContactViewModel.cs" />
     <Compile Include="ViewModels\ContactDetailsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
